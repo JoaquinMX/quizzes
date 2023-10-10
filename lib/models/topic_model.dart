@@ -8,14 +8,14 @@ class Topic {
   final String id;
   final String title;
   final String description;
-  final String imgUrl;
+  final String img;
   final List<Quiz> quizzes;
 
   Topic(
       {this.id = "",
       this.title = "",
       this.description = "",
-      this.imgUrl = "default.png",
+      this.img = "default.png",
       this.quizzes = const []});
 
   factory Topic.fromJson(Map<String, dynamic> json) => _$TopicFromJson(json);
