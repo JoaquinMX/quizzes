@@ -1,39 +1,33 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'firebase_options.dart';
-
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
-  final Future<FirebaseApp> _initializeApp = Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: FutureBuilder(
-          future: _initializeApp,
-          builder: (context, snapshot) {
-            if (snapshot.hasError) {
-              return Text(snapshot.error.toString());
-            } else if (snapshot.connectionState == ConnectionState.done) {
-              return MyHomePage(title: "MyAPP");
-            } else {
-              return const CircularProgressIndicator();
-            }
-          }),
-    );
+    return FutureBuilder(
+        future: null,
+        builder: (context, snapshot) {
+          if (snapshot.hasError) {
+            return const Text('Error');
+          } else if (snapshot.connectionState == ConnectionState.done) {
+            return MaterialApp(
+              title: 'Flutter Demo',
+              theme: ThemeData(
+                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+                useMaterial3: true,
+              ),
+              home: const MyHomePage(title: 'Flutter Demo Home Page'),
+            );
+          } else {
+            return const CircularProgressIndicator();
+          }
+        });
   }
 }
 
