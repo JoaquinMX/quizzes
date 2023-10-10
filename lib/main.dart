@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
                 routes: appRoutes,
                 title: 'Quizzz',
                 theme: appTheme,
-                initialRoute: '/topics');
+                initialRoute: '/');
           } else {
             return const CircularProgressIndicator();
           }

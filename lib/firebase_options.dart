@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '672032111722',
     projectId: 'quizzes-bf679',
     storageBucket: 'quizzes-bf679.appspot.com',
+    androidClientId: '672032111722-oo43fue9oehhbqel4ppu3knui2hoc6pt.apps.googleusercontent.com',
+    iosClientId: '672032111722-v7qpc3acdmhs8rkuc0197om2jsdk2d86.apps.googleusercontent.com',
     iosBundleId: 'com.joaquinmx.quizzes',
   );
 }
