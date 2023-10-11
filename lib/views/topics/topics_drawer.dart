@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:quizzes/models/models.dart';
+import 'package:quizzes/views/quiz/quiz_page.dart';
 
 class TopicsDrawer extends StatelessWidget {
   final List<Topic> topics;
@@ -50,7 +51,11 @@ class QuizList extends StatelessWidget {
             elevation: 4,
             margin: EdgeInsets.all(4),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => QuizPage(quizId: quiz.id),
+                ));
+              },
               child: Padding(
                 padding: EdgeInsets.all(8),
                 child: ListTile(
@@ -79,7 +84,7 @@ class QuizBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Report report = Provider.of<Report>(context);
+    var report = Provider.of<Report>(context);
     List completed = report.topics[topic.id] ?? [];
     if (completed.contains(quizId)) {
       return const Icon(

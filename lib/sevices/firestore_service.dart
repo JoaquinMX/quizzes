@@ -25,14 +25,10 @@ class FirestoreService {
 
   Stream<Report> streamReport() {
     return AuthService().userStream.switchMap((user) {
-      try {
-        if (user != null) {
-          var ref = _db.collection('reports').doc(user.uid);
-          return ref.snapshots().map((doc) => Report.fromJson(doc.data()!));
-        } else {
-          return Stream.fromIterable([Report()]);
-        }
-      } catch (e) {
+      if (user != null) {
+        var ref = _db.collection('reports').doc(user.uid);
+        return ref.snapshots().map((doc) => Report.fromJson(doc.data()!));
+      } else {
         return Stream.fromIterable([Report()]);
       }
     });
@@ -40,8 +36,8 @@ class FirestoreService {
 
   Future<void> updateUserReport(Quiz quiz) {
     try {
-      var user = AuthService().user;
-      var ref = _db.collection('reports').doc(user.currentUser!.uid);
+      var user = AuthService().user!;
+      var ref = _db.collection('reports').doc(user.uid);
 
       var data = {
         'total': FieldValue.increment(1),

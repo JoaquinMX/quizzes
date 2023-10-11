@@ -3,13 +3,18 @@ import 'package:provider/provider.dart';
 import 'package:quizzes/models/report_model.dart';
 import 'package:quizzes/sevices/auth_service.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
   @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  @override
   build(BuildContext context) {
     var report = Provider.of<Report>(context);
-    var user = AuthService().user.currentUser;
+    var user = AuthService().user;
 
     if (user != null) {
       return Scaffold(

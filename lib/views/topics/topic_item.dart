@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quizzes/components/animated_progress_bar.dart';
 import 'package:quizzes/models/models.dart';
+import 'package:quizzes/views/topics/topics_drawer.dart';
 
 class TopicItem extends StatelessWidget {
   final Topic topic;
@@ -68,9 +69,12 @@ class TopicScreen extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
             ),
           ),
-          Text(topic.title,
-              style: const TextStyle(
-                  height: 2, fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+            topic.title,
+            style: const TextStyle(
+                height: 2, fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          QuizList(topic: topic),
         ],
       ),
     );

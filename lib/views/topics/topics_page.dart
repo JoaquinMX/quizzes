@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizzes/components/bottom_nav_bar.dart';
+import 'package:quizzes/components/loading_screen.dart';
 import 'package:quizzes/sevices/firestore_service.dart';
 import 'package:quizzes/views/topics/topic_item.dart';
 import 'package:quizzes/views/topics/topics_drawer.dart';
@@ -38,19 +39,5 @@ class TopicsPage extends StatelessWidget {
             return const Text("No topics found");
           }
         });
-  }
-}
-
-class LoadingScreen extends StatelessWidget {
-  const LoadingScreen({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const SizedBox(
-        width: 250,
-        height: 250,
-        child: Center(child: CircularProgressIndicator()));
   }
 }

@@ -8,7 +8,7 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class AuthService {
   final Stream userStream = FirebaseAuth.instance.authStateChanges();
-  final FirebaseAuth user = FirebaseAuth.instance;
+  final user = FirebaseAuth.instance.currentUser;
 
   Future<void> anonymouslyLogin() async {
     try {
