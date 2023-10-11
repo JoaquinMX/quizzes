@@ -1,5 +1,9 @@
 # quizzes
 
+## Pending Task List
+[ ] Implement service when register new user add them to report collection in firestore with a document named as their UID.
+
+
 A new Flutter project.
 
 ## Getting Started
