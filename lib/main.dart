@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
               create: (_) => FirestoreService().streamReport(),
               initialData: Report(),
               child: MaterialApp(
+                  debugShowCheckedModeBanner: false,
                   routes: appRoutes,
                   title: 'Quiz',
                   theme: appTheme,

@@ -97,7 +97,5 @@ class QuizBadge extends StatelessWidget {
         color: Colors.grey,
       );
     }
-
-    return const Placeholder();
   }
 }

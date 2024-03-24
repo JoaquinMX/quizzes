@@ -50,7 +50,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDYeCr7gSXtXclVCa0poVbH3Kcnurc3OT8',
+    apiKey: 'AIzaSyCNqUtEP2Gi4CM009T7ohYe2JWZq9vXDxw',
     appId: '1:672032111722:android:af18413934ce674b7ede13',
     messagingSenderId: '672032111722',
     projectId: 'quizzes-bf679',
@@ -58,13 +58,11 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC-lz5uADlgsl_W5Ptc44JlkTlxkwo1oeY',
+    apiKey: 'AIzaSyB7yBKH001MoV65WWLMGiYNTqi4yKE_BaM',
     appId: '1:672032111722:ios:66c39305a3ef8f1f7ede13',
     messagingSenderId: '672032111722',
     projectId: 'quizzes-bf679',
     storageBucket: 'quizzes-bf679.appspot.com',
-    androidClientId: '672032111722-oo43fue9oehhbqel4ppu3knui2hoc6pt.apps.googleusercontent.com',
-    iosClientId: '672032111722-v7qpc3acdmhs8rkuc0197om2jsdk2d86.apps.googleusercontent.com',
     iosBundleId: 'com.joaquinmx.quizzes',
   );
 }

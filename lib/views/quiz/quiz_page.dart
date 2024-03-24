@@ -191,6 +191,7 @@ class QuestionPage extends StatelessWidget {
         context: context,
         builder: (context) {
           return Container(
+            width: double.infinity,
             padding: EdgeInsets.all(16),
             height: 250,
             child: Column(

@@ -33,10 +33,10 @@ class LoginPage extends StatelessWidget {
                       return SignInWithAppleButton(onPressed: () {
                         //AuthService().appleLogin();
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
+                          const SnackBar(
                             backgroundColor: Colors.black,
                             content: Text(
-                                "This feature is not yet available. Please try again later.",
+                                "This feature is not available in demo projects.",
                                 style: TextStyle(color: Colors.white)),
                           ),
                         );
